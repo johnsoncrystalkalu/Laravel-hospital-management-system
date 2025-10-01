@@ -48,6 +48,7 @@ class AdminController extends Controller
         $doctor = Doctor::findOrFail($id);
         $doctor->delete();
 
+        //added it myself
         $imagePath = public_path('project_images/'.$doctor->doctors_image);
 
     // Check and delete
