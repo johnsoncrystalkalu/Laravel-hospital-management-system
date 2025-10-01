@@ -7,6 +7,8 @@
         <th>Name</th>
         <th>Email</th>
         <th>Specialty</th>
+        <th>Status</th>
+        <th>Action</th>
       </tr></thead>
 
     <tbody>
@@ -15,6 +17,16 @@
         <td>{{$appointment->full_name}}</td>
         <td>{{$appointment->email_address}}</td>
         <td>{{$appointment->speciality}}</td>
+        <td>{{$appointment->status}}</td>
+        <td> <form action="{{route('change.status', $appointment->id)}}" method="POST">
+            @csrf
+        <select name="status" id="status">
+            <option value="{{$appointment->status}}">{{$appointment->status}}</option>
+            <option value="accept">accept</option>
+            <option value="in porgress">in progress</option>
+        </select>
+        <button name="submit" type="submit" class="btn btn-info">submit</button>
+        </form></td>
         </tr>
         @endforeach
 

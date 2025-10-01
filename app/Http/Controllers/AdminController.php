@@ -84,7 +84,14 @@ class AdminController extends Controller
             $request->doctors_image->move('project_images', $image_name);
         }
         return redirect()->back()->with('success_updatemessage', 'Doctor Updated successsfully');
+    }
 
+    public function changeStatus(Request $request, $id){
+        $appointment = Appointment::findOrFail($id);
+
+        $appointment->status = $request->status;
+        $appointment->save();
+        return redirect()->back();
 
     }
 

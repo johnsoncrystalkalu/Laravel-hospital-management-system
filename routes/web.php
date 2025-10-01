@@ -20,6 +20,7 @@ Route::get('view-doctors', [AdminController::class, 'viewDoctors'])->name('view.
 Route::get('delete-doctor/{id}', [AdminController::class, 'deleteDoctor'])->name('delete.doctor');
 Route::get('update-doctor/{id}', [AdminController::class, 'updateDoctor'])->name('update.doctor');
 Route::post('edit-add-doctor/{id}', [AdminController::class, 'editAddDoctors'])->name('edit.adddoctors');
+Route::post('change-status/{id}', [AdminController::class, 'changeStatus'])->name('change.status');
 
 });
 
