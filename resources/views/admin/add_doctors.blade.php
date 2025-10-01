@@ -6,7 +6,7 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Add Doctor form</h4>
-          <p class="card-description"> Add your doctors here</p>
+          <p class="card-description"> Add doctors here</p>
 
           @if(session('success_message'))
           <div class="bg bg-success">

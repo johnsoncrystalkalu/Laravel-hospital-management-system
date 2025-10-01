@@ -4,14 +4,16 @@
 @section('view_content')
 <div class="table-responsive">
     <table class="table">
-    <thead style="background: white">   <tr>
+    <thead style="background: white">
+         <tr>
         <th>Name</th>
         <th>Phone</th>
         <th>Specialty</th>
         <th>Room</th>
         <th>Image</th>
         <th>Action</th>
-      </tr></thead>
+      </tr>
+    </thead>
 
     <tbody>
         @foreach ($doctors as $doctor)
